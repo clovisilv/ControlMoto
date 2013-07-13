@@ -1,0 +1,14 @@
+#Fat Jar Configuration File
+#Sun Jan 09 20:40:52 BRST 2011
+onejar.license.required=false
+manifest.classpath=./ lib
+manifest.removesigners=true
+onejar.checkbox=false
+jarname=ControlMoto_08012011-1.0.2.jar
+manifest.mergeall=true
+manifest.mainclass=br.com.cs.controlmoto.controller.ControlMoto
+manifest.file=META-INF/MANIFEST.MF
+jarname.isextern=false
+onejar.expand=
+excludes=<jar|commons-collections-3.2.1.jar>;<jar|commons-digester-1.7.jar>;<jar|commons-logging-api-1.0.2.jar>;<jar|demo-taglet.jar>;<jar|demos.jar>;<jar|Filters.jar>;<jar|ireport.jar>;<jar|itext-1.3.1.jar>;<jar|iText-2.1.7.jar>;<jar|jasperreports-3.7.3.jar>;<jar|jdt-compiler.jar>;<jar|jh.jar>;<jar|jhall.jar>;<jar|jxlayer.jar_swingX.jar>;<jar|MultipleGradientPaint.jar>;<jar|swing-layout.jar>;<jar|swing-worker.jar>;<jar|swingbean.jar>;<jar|commons-logging-1.1.jar>;<jar|commons-beanutils-1.8.2.jar>;<jar|commons-javaflow-20060411.jar>;<jar|groovy-all-1.5.5.jar>;<jar|commons-digester-1.5.jar>;<jar|xalan.jar>
+includes=

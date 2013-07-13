@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Class-Path: . controlmoto_lib/commons-beanutils-1.8.2.jar controlmoto_lib/commons-collections-3.2.1.jar 
+ controlmoto_lib/commons-digester-1.7.jar controlmoto_lib/commons-javaflow-20060411.jar controlmoto_lib/commons-logging-1.1.jar
+ controlmoto_lib/commons-logging-api-1.0.2.jar controlmoto_lib/demo-taglet.jar controlmoto_lib/demos.jar controlmoto_lib/Filters.jar
+ controlmoto_lib/groovy-all-1.5.5.jar controlmoto_lib/ireport.jar controlmoto_lib/itext-1.3.1.jar controlmoto_lib/iText-2.1.7.jar 
+ controlmoto_lib/jasperreports-3.7.3.jar controlmoto_lib/jdt-compiler.jar controlmoto_lib/jh.jar controlmoto_lib/jhall.jar 
+ controlmoto_lib/jxlayer.jar_swingX.jar controlmoto_lib/MultipleGradientPaint.jar controlmoto_lib/swing-layout.jar
+ controlmoto_lib/swing-worker.jar controlmoto_lib/swingbean.jar controlmoto_lib/commons-logging-1.1.jar 
+ controlmoto_lib/mysql-connector-java-5.1.14-bin.jar
+Main-Class: br.com.cs.controlmoto.controller.ControlMoto

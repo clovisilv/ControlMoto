@@ -1,0 +1,26 @@
+#======================================================================#
+#         CONFIGURACAO DAS ESTRUTURA DE PASTAS PARA QUE                #
+#               A APLICACAO FUNCIONE NO LINUX                          #
+#======================================================================#
+#ControlMoto(pasta raiz)
+#	ControlMoto-06032011-1.0.3.jar  (arquivo jar da aplicacao)
+#	|-ControlMoto(sub pasta)
+#		|-ajuda(sub pasta)
+#		|-contromoto_lib(sub pasta)
+#		|-imagens(sub pasta)
+#		|-reports(sub pasta)
+#		|-resources(sub pasta)
+
+
+#======================================================================#
+#         CONFIGURACAO DAS ESTRUTURA DE PASTAS PARA QUE                #
+#               A APLICACAO FUNCIONE NO WINDOWS                        #
+#======================================================================#
+#ControlMoto(pasta raiz)
+#	ControlMoto-06032011-1.0.3.jar  (arquivo jar da aplicacao)
+#	|-ControlMoto(sub pasta)
+#		|-ajuda(sub pasta)
+#		|-contromoto_lib(sub pasta)
+#		|-imagens(sub pasta)
+#		|-reports(sub pasta)
+#		|-resources(sub pasta)

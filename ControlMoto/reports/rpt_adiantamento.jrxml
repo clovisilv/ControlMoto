@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rpt_adiantamento" language="groovy" pageWidth="595" pageHeight="280" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="adiantamentoPk" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     adiantamento.`AdiantamentoPk` AS adiantamento_AdiantamentoPk,
+     adiantamento.`CodSolicitante` AS adiantamento_CodSolicitante,
+     adiantamento.`NomeSolicitante` AS adiantamento_NomeSolicitante,
+     adiantamento.`Valor` AS adiantamento_Valor,
+     adiantamento.`TipoAdiantamento` AS adiantamento_TipoAdiantamento,
+     adiantamento.`DataSolicitacao` AS adiantamento_DataSolicitacao,
+     adiantamento.`StatusSolicitacao` AS adiantamento_StatusSolicitacao
+FROM
+     `adiantamento` adiantamento
+WHERE
+     adiantamento.`AdiantamentoPk` = $P{adiantamentoPk}]]>
+	</queryString>
+	<field name="adiantamento_AdiantamentoPk" class="java.lang.Integer"/>
+	<field name="adiantamento_CodSolicitante" class="java.lang.String"/>
+	<field name="adiantamento_NomeSolicitante" class="java.lang.String"/>
+	<field name="adiantamento_Valor" class="java.math.BigDecimal"/>
+	<field name="adiantamento_TipoAdiantamento" class="java.lang.String"/>
+	<field name="adiantamento_DataSolicitacao" class="java.sql.Date"/>
+	<field name="adiantamento_StatusSolicitacao" class="java.lang.String"/>
+	<variable name="Alerta" class="java.lang.String">
+		<variableExpression><![CDATA[$F{adiantamento_StatusSolicitacao}.equals( "Excuido" )? "POR FAVOR NÃO PAGAR ESTE ADIANTAMENTO, POIS ELE ESTÁ CANCELADO. " : ""]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="36" splitType="Stretch">
+			<rectangle radius="5">
+				<reportElement x="0" y="0" width="555" height="36"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="205" y="0" width="193" height="36"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ADIANTAMENTO]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="118" splitType="Stretch">
+			<rectangle>
+				<reportElement x="448" y="92" width="107" height="26"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="100" y="92" width="348" height="26"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="92" width="100" height="26"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="48" width="555" height="44"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="48"/>
+			</rectangle>
+			<textField>
+				<reportElement x="114" y="2" width="174" height="20"/>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$F{adiantamento_AdiantamentoPk}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="114" y="26" width="187" height="20"/>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$F{adiantamento_TipoAdiantamento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="450" y="26" width="100" height="20"/>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$F{adiantamento_StatusSolicitacao}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="4" y="96" width="96" height="20"/>
+				<textElement verticalAlignment="Bottom">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cod Solicitante]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="105" y="96" width="275" height="20"/>
+				<textElement verticalAlignment="Bottom">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nome Solicitante]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="472" y="96" width="51" height="20"/>
+				<textElement verticalAlignment="Bottom">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Valor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="2" width="110" height="20"/>
+				<textElement verticalAlignment="Bottom">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código Adiantamento: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="26" width="110" height="20"/>
+				<textElement verticalAlignment="Bottom">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tipo do Adiantamento:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="316" y="26" width="134" height="20"/>
+				<textElement verticalAlignment="Bottom">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Situação do Adiantamento:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="256" y="52" width="41" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[AVISO]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="4" y="70" width="546" height="16"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{adiantamento_StatusSolicitacao}.equals( "Excluido" ) ? "POR FAVOR NÃO PAGAR ESTE ADIANTAMENTO ELE ESTÁ CANCELADO." : ""]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="24" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="24"/>
+			</rectangle>
+			<textField>
+				<reportElement x="4" y="2" width="92" height="20"/>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$F{adiantamento_CodSolicitante}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="105" y="2" width="275" height="20"/>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$F{adiantamento_NomeSolicitante}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;-#,##0.00">
+				<reportElement x="456" y="2" width="96" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$F{adiantamento_Valor}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="55" splitType="Stretch">
+			<staticText>
+				<reportElement x="400" y="40" width="60" height="12"/>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Assinatura]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="54"/>
+			</rectangle>
+			<line>
+				<reportElement x="306" y="37" width="240" height="1"/>
+			</line>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="308" y="4" width="195" height="18"/>
+				<textElement textAlignment="Right" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$F{adiantamento_DataSolicitacao}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="396" y="40" width="60" height="12"/>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Assinatura]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

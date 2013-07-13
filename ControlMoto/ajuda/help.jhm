@@ -1,0 +1,24 @@
+<?xml version= "1.0"  encoding= "ISO-8859-1"  ?> 
+<!DOCTYPE map PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp Map Version 1.0//EN" "http://java.sun.com/products/javahelp/map_1_0.dtd" > 
+<map version= "1.0" > 
+	<mapID target= "item1"  url= "html/helloWorld.html"  />
+	<mapID target= "item2"  url= "html/cadCliente.html"  /> 
+	<mapID target= "item3"  url= "html/cadMotorista.html"  /> 
+	<mapID target= "item4"  url= "html/cadUsuario.html"  />	
+	<mapID target= "item5"  url= "html/pesqCadCliente.html"  />
+	<mapID target= "item6"  url= "html/pesqCadMotorista.html"  />
+	<mapID target= "item7"  url= "html/osAbrir.html"  /> 
+	<mapID target= "item8"  url= "html/osFechar.html"  />
+	<mapID target= "item9"  url= "html/pesqOSAberta.html"  /> 
+	<mapID target= "item10"  url= "html/pesqOSFechada.html"  />
+	<mapID target= "item11"  url= "html/relatoriosCliente.html"  />
+	<mapID target= "item12"  url= "html/relatoriosMotorista.html"  />	
+	<!-- Imagens -->
+	<mapID target="back" url="imagem/back.jpeg" />
+	<!--
+	<mapID target="next" url="imagem/next.jpeg" />
+	<mapID target="print" url="imagem/print.jpeg" />
+	<mapID target="bock" url="imagem/bock.jpeg" />
+	<mapID target="lupa" url="imagem/lupa.jpeg" />
+	-->
+</map>

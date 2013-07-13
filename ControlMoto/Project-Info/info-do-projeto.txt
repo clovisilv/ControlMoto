@@ -1,0 +1,24 @@
+Autor: Clóvis Silvério
+Empresa: FICTEC Consultoria em Informática
+Projeto: ControlMoto
+Versão: 1.0.5
+Data: 13/09/2012 21:47:00
+Info:	Nesta versão do projeto está tudo funcionaldo perfeitamente.
+		Está sendo usado Linguaguem SQL para a instruções de CRUD.
+		Foi desenvolvida a parte para faturamento e geração do arquivo RPS para emissão de nota fiscala de serviço.
+		
+Notas de versões
+Data: 13/09/2012 21:47:00
+V.:1.0.5 :	Correção da cláusula UPDATE da classe CadMotorista e não estava atualizando as informações.
+			Acerto do campo código na classe CadMotoristaController para deixar as letras maíusculas ao perder o foco.
+			Correção do texto da ajuda na cadastrar um motorista no sistema.
+
+Data 16/09/2012 21:58:00
+V.:1.0.6 :  Desenvolvimento das telas para casdastro de Fornecedor, Contas a Pagar e Contas a Receber bem como toda a logica para amazenar
+ 			na base de dados.
+ 			Criação da instrução SQL para gerar as tabelas na banco de dados para a parte do controle financeiro com as tabelas
+ 			tbespeciedocumento, tbformacobrancajuros, tbformapagto, tbsituacao, tbtipopagto
+
+Data 07/11/2012 15:30:00
+V.: 1.0.7 : Atualição das libs para funcionamento dos relatórios com iReport 4.5.1.
+			Inclusão de Barra de Feramentas nas telas da funcionalidade ligadas a OS.

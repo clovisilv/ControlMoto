@@ -1,0 +1,25 @@
+/* CSS Document */
+body{
+	top: 5px; left: 20px; width: 600px; height: 700px;
+	border-width: 1px; border-style: solid; border-color: 000080;
+	vertical-aling: middle;
+	}
+	
+#titulo {
+	font-family: tahoma, "comic sans ms", verdana;
+	color: #0000CC;
+	font-size: 18pt;
+	text-decoration: underline;
+	}
+
+#subTitulo {
+	font-family: tahoma, "comic sans ms", verdana;
+	color: #0000CC;
+	font-size: 16pt;
+	text-decoration: underline;
+	}
+
+#texto {
+	font-family: tahoma, "comic sans ms", verdana;
+	font-size: 12pt;
+	}
